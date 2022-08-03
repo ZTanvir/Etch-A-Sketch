@@ -14,10 +14,10 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    border: 1px solid black;
 }
 .box{
-    width: 25px;
-    height: 25px;
-    border: 1px solid blue;
-    overflow: hidden
+    width: 6.25%;
+    height: 6.25%;
+    border: 1px solid yellowgreen;
 }
