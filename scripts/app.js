@@ -4,10 +4,10 @@ let containerEl = document.querySelector(".container");
 let userInputSquare = document.querySelector("input");
 document.querySelector("button").addEventListener("click", function (e) {
     // Remove all the children from container parent
-    while(containerEl.firstChild){
-        containerEl.removeChild(containerEl.firstChild)
+    while (containerEl.firstChild) {
+        containerEl.removeChild(containerEl.firstChild);
     }
-    
+
     // Convert user input string to number
     let row_sqr = Number(userInputSquare.value);
     let col_sqr = row_sqr;
@@ -42,4 +42,3 @@ document.querySelector("button").addEventListener("click", function (e) {
         box.addEventListener("mouseover", changeBoxColor)
     );
 });
-
