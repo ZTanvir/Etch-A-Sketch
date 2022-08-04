@@ -4,6 +4,11 @@ console.log(containerEl);
 // Get user input
 let userInputSquare = document.querySelector("input");
 document.querySelector("button").addEventListener("click", function (e) {
+    // Remove all the children from container parent
+    while(containerEl.firstChild){
+        containerEl.removeChild(containerEl.firstChild)
+    }
+    
     console.log(userInputSquare.value);
     console.log(typeof userInputSquare.value);
     // Convert user input string to number
