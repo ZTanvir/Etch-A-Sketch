@@ -17,4 +17,5 @@ body{
     border: 1px solid black;
 }
 .box{
+    overflow: hidden;
 }
