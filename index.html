@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,14 +11,24 @@
     <script src="./scripts/app.js" defer></script>
     <title>Etch-A-Sketch</title>
 </head>
+
 <body>
     <div>
-        Number of square:<input type="text" name="user_input" placeholder="Between 1 to 100">
-        <button>Generate</button>
-        <button class="random-color">Random Color</button>
+        <label for="total-box">Number of square:</label>
+        <input type="text" id="total-box" name="user_input" placeholder="Between 1 to 100">
+        <button class="generate-btn">Generate</button>
+        <div>
+            <button class="random-color">Random Color</button>
+        </div>
+        <div>
+            <label for="choose-color">Choose a color:</label>
+            <input type="color" name="choose-a-color" id="choose-color" value="#e66465">
+        </div>
     </div>
+
 
     <div class="container">
     </div>
 </body>
+
 </html>

@@ -1,17 +1,28 @@
 let containerEl = document.querySelector(".container");
 
-// Feature custom color
+// Feature custom color btn
 let customColorBtn = document.querySelector(".random-color");
 customColorBtn.addEventListener("click", function (e) {
-    customColorBtn.classList.toggle("true");
+    customColorBtn.classList.add("true");
+});
+// Feature choose a color
+// Select color picker
+let chooseColor = document.querySelector("#choose-color");
+chooseColor.addEventListener("input", function (e) {
+    let defaultColor = "#e66465";
+    let newColor = chooseColor.value;
+    // Check for random color button is enable
+    if (customColorBtn.classList.contains("true")) {
+        customColorBtn.classList.remove("true");
+    }
+    if (defaultColor != newColor) {
+        chooseColor.classList.add("picked");
+    }
 });
 
-// Rainbow
-// rgb 0 black - 1 white
-
 // Get user input
-let userInputSquare = document.querySelector("input");
-document.querySelector("button").addEventListener("click", function (e) {
+let userInputSquare = document.querySelector("#total-box");
+document.querySelector(".generate-btn").addEventListener("click", function (e) {
     // Remove all the children from container parent
     while (containerEl.firstChild) {
         containerEl.removeChild(containerEl.firstChild);
@@ -57,6 +68,9 @@ document.querySelector("button").addEventListener("click", function (e) {
             let blue = randomNumber();
             let green = randomNumber();
             e.target.style.backgroundColor = `rgb(${red},${blue},${green})`;
+        } else if (chooseColor.classList.contains("picked")) {
+            let newColor = chooseColor.value;
+            e.target.style.backgroundColor = `${newColor}`;
         } else {
             e.target.style.backgroundColor = "black";
         }

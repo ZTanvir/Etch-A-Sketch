@@ -1,13 +1,17 @@
-*,*::after,*::before{
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
 }
-.container{
+
+.container {
     margin-top: 50px;
     width: 400px;
     height: 400px;
@@ -16,6 +20,7 @@ body{
     flex-wrap: wrap;
     border: 1px solid black;
 }
-.box{
+
+.box {
     overflow: hidden;
 }
