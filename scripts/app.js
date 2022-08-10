@@ -79,3 +79,13 @@ document.querySelector(".generate-btn").addEventListener("click", function (e) {
         box.addEventListener("mouseover", changeBoxColor)
     );
 });
+
+// Clear the sketchpad when reset btn clicked
+let resetBtnEl = document.querySelector(".reset")
+resetBtnEl.addEventListener("click",function(e){
+    while (containerEl.firstChild) {
+        containerEl.removeChild(containerEl.firstChild);
+    }
+})
+
+
