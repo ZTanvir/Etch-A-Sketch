@@ -5,6 +5,7 @@ let customColorBtn = document.querySelector(".random-color");
 customColorBtn.addEventListener("click", function (e) {
     customColorBtn.classList.add("true");
 });
+
 // Feature choose a color
 // Select color picker
 let chooseColor = document.querySelector("#choose-color");
@@ -15,8 +16,27 @@ chooseColor.addEventListener("input", function (e) {
     if (customColorBtn.classList.contains("true")) {
         customColorBtn.classList.remove("true");
     }
+    if (blackBtnEl.classList.contains("colorBlack")) {
+        blackBtnEl.classList.remove("colorBlack");
+    }
     if (defaultColor != newColor) {
         chooseColor.classList.add("picked");
+    }
+});
+
+// Click black button set the color of sketchpad black
+// Select the element with class blackBtn
+let blackBtnEl = document.querySelector(".blackBtn");
+// Added event listner to blackBtn
+blackBtnEl.addEventListener("click", function (e) {
+    // add class to black btn so we know it has clicked
+    blackBtnEl.classList.add("colorBlack");
+    // remove other added class true and picked from element
+    if (customColorBtn.classList.contains("true")) {
+        customColorBtn.classList.remove("true");
+    }
+    if (chooseColor.classList.contains("picked")) {
+        chooseColor.classList.remove("picked");
     }
 });
 
@@ -71,8 +91,12 @@ document.querySelector(".generate-btn").addEventListener("click", function (e) {
         } else if (chooseColor.classList.contains("picked")) {
             let newColor = chooseColor.value;
             e.target.style.backgroundColor = `${newColor}`;
-        } else {
-            e.target.style.backgroundColor = "black";
+        } else if (blackBtnEl.classList.contains("colorBlack")) {
+            e.target.style.backgroundColor = "#313030";
+        }
+        //not color change button click will set the background color to black
+        else {
+            e.target.style.backgroundColor = "#313030";
         }
     }
     allBoxEl.forEach((box) =>
@@ -81,11 +105,9 @@ document.querySelector(".generate-btn").addEventListener("click", function (e) {
 });
 
 // Clear the sketchpad when reset btn clicked
-let resetBtnEl = document.querySelector(".reset")
-resetBtnEl.addEventListener("click",function(e){
+let resetBtnEl = document.querySelector(".reset");
+resetBtnEl.addEventListener("click", function (e) {
     while (containerEl.firstChild) {
         containerEl.removeChild(containerEl.firstChild);
     }
-})
-
-
+});
