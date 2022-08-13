@@ -1,26 +1,66 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:yellow;
+}
+h1 {
+  font-size: 48px;
+}
+
+button {
+  padding: 10px 10px;
+  display: inline-block;
+  margin-right: 10px;
+}
+button:hover {
+  background-color: cornflowerblue;
+  color: white;
+}
+#total-box {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.all-btn {
+  max-width: 600px;
+}
+
+.color-reset-btn {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+label {
+  align-self: center;
+}
+#choose-color {
+  align-self: center;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .container {
-    margin-top: 50px;
-    width: 400px;
-    height: 400px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border: 1px solid black;
+  margin-top: 50px;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  padding: 5px;
+  background-color: white;
 }
 
 .box {
-    overflow: hidden;
+  overflow: hidden;
+  border: 0.1px solid black;
 }

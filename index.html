@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Css file -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css" />
     <!-- JS file -->
     <script src="./scripts/app.js" defer></script>
     <title>Etch-A-Sketch</title>
-</head>
+  </head>
 
-<body>
-    <div>
-        <label for="total-box">Number of square:</label>
-        <input type="text" id="total-box" name="user_input" placeholder="Between 1 to 100">
-        <button class="generate-btn">Generate</button>
-        <div>
-            <button class="random-color">Random Color</button>
-        </div>
-        <div>
-            <button class="reset">Reset</button>
-        </div>
-        <div>
-            <button class="blackBtn">Black</button>
-        </div>
-        <div>
-            <label for="choose-color">Choose a color:</label>
-            <input type="color" name="choose-a-color" id="choose-color" value="#e66465">
-        </div>
+  <body>
+    <h1>Etch a Sketch</h1>
+    <div class="all-btn">
+      <label for="total-box">Number of square:</label>
+      <input
+        type="text"
+        id="total-box"
+        name="user_input"
+        placeholder="Between 1 to 100"
+      />
+      <button class="generate-btn">Generate</button>
+      <div class="color-reset-btn">
+        <button class="random-color">Random Color</button>
+        <button class="reset">Reset</button>
+        <button class="blackBtn">Black</button>
+        <label for="choose-color">Choose a color:</label>
+        <input
+          type="color"
+          name="choose-a-color"
+          id="choose-color"
+          value="#e66465"
+        />
+      </div>
     </div>
 
-
-    <div class="container">
-    </div>
-</body>
-
+    <div class="container"></div>
+  </body>
 </html>
