@@ -6,36 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Css file -->
     <link rel="stylesheet" href="./styles/style.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon -->
+    <link rel="shortcut icon" href="./image/art.png" type="image/x-icon" />
     <!-- JS file -->
     <script src="./scripts/app.js" defer></script>
     <title>Etch-A-Sketch</title>
   </head>
 
   <body>
-    <h1>Etch a Sketch</h1>
-    <div class="all-btn">
-      <label for="total-box">Number of square:</label>
-      <input
-        type="text"
-        id="total-box"
-        name="user_input"
-        placeholder="Between 1 to 100"
-      />
-      <button class="generate-btn">Generate</button>
-      <div class="color-reset-btn">
-        <button class="random-color">Random Color</button>
-        <button class="reset">Reset</button>
-        <button class="blackBtn">Black</button>
-        <label for="choose-color">Choose a color:</label>
+    <header>
+      <h1>Etch a Sketch</h1>
+    </header>
+    <main>
+      <div class="all-btn">
+        <label for="total-box">Number of square:</label>
         <input
-          type="color"
-          name="choose-a-color"
-          id="choose-color"
-          value="#e66465"
+          type="text"
+          id="total-box"
+          name="user_input"
+          placeholder="Between 1 to 100"
         />
+        <button class="generate-btn">Generate</button>
+        <div class="color-reset-btn">
+          <button class="random-color">Random Color</button>
+          <button class="reset">Reset</button>
+          <button class="blackBtn">Black</button>
+          <label for="choose-color">Choose a color:</label>
+          <input
+            type="color"
+            name="choose-a-color"
+            id="choose-color"
+            value="#e66465"
+          />
+        </div>
       </div>
-    </div>
 
-    <div class="container"></div>
+      <div class="container"></div>
+    </main>
+    <footer>
+      <p>Copyright © 2022 Zahirul</p> <a href="https://github.com/ZTanvir"><img class="github-logo" src="./image/logo/GitHub-Mark-32px.png" alt="github logo"></a>
+    </footer>
   </body>
 </html>
